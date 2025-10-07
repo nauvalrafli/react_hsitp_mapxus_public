@@ -6,7 +6,7 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
 
 ## 📖 How to Use
 
-1. Install the package:
+1. Install the package. In case of updating the package, please delete your existing node_modules. 
    ```sh
    npm install https://github.com/nauvalrafli/react_hsitp_mapxus_public/releases/download/Hsitp/react-native-mapxus-hsitp-0.1.0.tgz
    ```
