@@ -37,3 +37,9 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
      },
    });
    ```
+3. Clean gradle
+   ```
+   cd android && ./gradlew clean && cd ..
+   ```
+4. If the component is not showing (blank) please check the size assignment.
+5. For more detailed information about how to implement please check in folder example   
