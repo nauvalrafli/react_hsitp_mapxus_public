@@ -14,8 +14,8 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
 2. Import and use the MapxusHsitpView component in your app along with request permission required for the app:
    ```js
    import React from 'react';
-   import { View, StyleSheet } from 'react-native';
-   import MapxusHsitpView from 'react-native-mapxus-hsitp';
+   import { View, StyleSheet, PermissionsAndroid } from 'react-native';
+   import { MapxusHsitpView } from 'react-native-mapxus-hsitp';
 
    async function requestPermissions() {
      try {
@@ -47,8 +47,8 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
        alignItems: 'center',
      },
      nativeView: {
-       width: 300,
-       height: 300,
+       width: '100%',
+       height: '100%',
      },
    });
    ```
