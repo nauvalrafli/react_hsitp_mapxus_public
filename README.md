@@ -11,13 +11,28 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
    npm install https://github.com/nauvalrafli/react_hsitp_mapxus_public/releases/download/Hsitp/react-native-mapxus-hsitp-0.1.0.tgz
    ```
 
-2. Import and use the MapxusHsitpView component in your app:
+2. Import and use the MapxusHsitpView component in your app along with request permission required for the app:
    ```js
    import React from 'react';
    import { View, StyleSheet } from 'react-native';
    import MapxusHsitpView from 'react-native-mapxus-hsitp';
 
+   async function requestPermissions() {
+     try {
+       const granted = await PermissionsAndroid.requestMultiple([
+         PermissionsAndroid.PERMISSIONS.CAMERA,
+         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+         PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
+       ]);
+       console.log(granted);
+     } catch (err) {
+       console.warn(err);
+     }
+   }
+
    export default function App() {
+     requestPermissions();
+   
      return (
        <View style={styles.container}>
          <MapxusHsitpView style={styles.nativeView} />
