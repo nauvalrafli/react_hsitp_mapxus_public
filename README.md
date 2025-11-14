@@ -52,7 +52,7 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
      },
    });
    ```
-3. Make sure to use Material Theme for your apps.
+3. Make sure to use Material Theme for your apps/activity.
    Recommended Theme:
    ```
    android:theme="@style/Theme.Material3.Light.NoActionBar"
