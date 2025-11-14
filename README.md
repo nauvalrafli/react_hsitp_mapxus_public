@@ -8,7 +8,7 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
 
 1. Install the package. In case of updating the package, please delete your existing node_modules. 
    ```sh
-   npm install https://github.com/nauvalrafli/react_hsitp_mapxus_public/releases/download/HSITP_v0.1.3/react-native-mapxus-hsitp-0.1.3.tgz
+   npm install https://github.com/nauvalrafli/react_hsitp_mapxus_public/releases/download/HSITP_v0.1.6/react-native-mapxus-hsitp-0.1.6.tgz
    ```
 
 2. Import and use the MapxusHsitpView component in your app along with request permission required for the app:
@@ -52,9 +52,14 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
      },
    });
    ```
-3. Clean gradle
+3. Make sure to use Material Theme for your apps.
+   Recommended Theme:
+   ```
+   android:theme="@style/Theme.Material3.Light.NoActionBar"
+   ```
+5. Clean gradle
    ```
    cd android && ./gradlew clean && cd ..
    ```
-4. If the component is not showing (blank) please check the size assignment.
-5. For more detailed information about how to implement please check in folder example   
+6. If the component is not showing (blank) please check the size assignment.
+7. For more detailed information about how to implement please check in folder example   
