@@ -6,7 +6,7 @@
  */
 
 import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
-import { MapxusHsitpView } from 'react-native-mapxus-hsitp';
+import { MapxusButtonWrapperView, MapxusHsitpView } from 'react-native-mapxus-hsitp';
 import {
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
@@ -30,7 +30,9 @@ function AppContent() {
       styles.container,
       { backgroundColor: isDarkMode ? '#000000' : '#FFFFFF' }
     ]}>
-      <MapxusHsitpView style={styles.mapxus} />
+      <MapxusButtonWrapperView>
+        <Text>Open Map</Text>
+      </MapxusButtonWrapperView>
     </View>
   );
 }

@@ -13,7 +13,7 @@
     "@react-native/new-app-screen": "0.81.4",
     "react": "19.1.0",
     "react-native": "0.81.4",
-    "react-native-mapxus-hsitp": "https://github.com/nauvalrafli/react_hsitp_mapxus_public/releases/download/Hsitp/react-native-mapxus-hsitp-0.1.0.tgz",
+    "react-native-mapxus-hsitp": "https://github.com/nauvalrafli/react_hsitp_mapxus_public/releases/download/HSITP_0.1.13/react-native-mapxus-hsitp-0.1.13.tgz",
     "react-native-safe-area-context": "^5.5.2"
   },
   "devDependencies": {
