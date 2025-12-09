@@ -55,7 +55,7 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
      },
    });
    ```
-3. For more detailed information about how to implement please check in folder example
+3. For more detailed information about how to implement please check in folder ModuleApplication
 
 ## 📖 How to Use (Up to Version 0.1.12)
 
@@ -115,4 +115,4 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
    cd android && ./gradlew clean && cd ..
    ```
 6. If the component is not showing (blank) please check the size assignment.
-7. For more detailed information about how to implement please check in folder example   
+7. For more detailed information about how to implement please check in folder ModuleApplication (Check for older version)   
