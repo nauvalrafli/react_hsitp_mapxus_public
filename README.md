@@ -4,14 +4,24 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
 
 ---
 
-## 📖 How to Use
+## 📖 How to Use (Start from Version 0.1.13)
+1. Install the package. In case of updating the package, please delete your existing node_modules. 
+   ```sh
+   npm install https://github.com/nauvalrafli/react_hsitp_mapxus_public/releases/download/HSITP_0.1.13/react-native-mapxus-hsitp-0.1.13.tgz
+   ```
+2. Import and use the Mapxus
+
+## 📖 How to Use (Up to Version 0.1.12)
 
 1. Install the package. In case of updating the package, please delete your existing node_modules. 
    ```sh
    npm install https://github.com/nauvalrafli/react_hsitp_mapxus_public/releases/download/HSITP_v0.1.6/react-native-mapxus-hsitp-0.1.6.tgz
    ```
 
-2. Import and use the MapxusHsitpView component in your app along with request permission required for the app:
+2. Import and use the MapxusHsitpView component in your app along with request permission required for the app. You can customize the view based on your needs, just wrap it with the component provided.
+   
+   Note: please avoid using a clickable component such as Button for the time being. As it will ignore the click event and prevent opening the application which shows the map.
+   
    ```js
    import React from 'react';
    import { View, StyleSheet, PermissionsAndroid } from 'react-native';
@@ -35,7 +45,9 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
    
      return (
        <View style={styles.container}>
-         <MapxusHsitpView style={styles.nativeView} />
+         <MapxusButtonWrapperView>
+           <Text>Open Map</Text>
+         </MapxusButtonWrapperView>
        </View>
      );
    }
@@ -52,14 +64,4 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
      },
    });
    ```
-3. Make sure to use Material Theme for your apps/activity.
-   Recommended Theme:
-   ```
-   android:theme="@style/Theme.Material3.Light.NoActionBar"
-   ```
-5. Clean gradle
-   ```
-   cd android && ./gradlew clean && cd ..
-   ```
-6. If the component is not showing (blank) please check the size assignment.
-7. For more detailed information about how to implement please check in folder example   
+7. For more detailed information about how to implement please check in folder example
