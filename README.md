@@ -55,7 +55,34 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
      },
    });
    ```
-3. For more detailed information about how to implement please check in folder ModuleApplication
+3. Add these lines on android/settings.gradle
+   ```
+   dependencyResolutionManagement {
+     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+   
+     repositories {
+       google()
+       mavenCentral()
+   
+       maven {
+         name = "MapxusRelease"
+         url = providers.gradleProperty("MAPXUS_RELEASE_URL").get()
+         allowInsecureProtocol = true
+         credentials {
+           username = providers.gradleProperty("MAPXUS_RELEASE_USERNAME").get()
+           password = providers.gradleProperty("MAPXUS_RELEASE_PASSWORD").get()
+         }
+       }
+     }
+   }
+   ```
+4. Add the credentials on android/gradle.properties
+   ```
+   MAPXUS_RELEASE_URL=https://nexus3.mapxus.com/repository/mapxus-releases
+   MAPXUS_RELEASE_USERNAME=4uGBjGYX
+   MAPXUS_RELEASE_PASSWORD=NqTDm1UiCihOdus3
+   ```
+6. For more detailed information about how to implement please check in folder ModuleApplication
 
 ## 📖 How to Use (Up to Version 0.1.12)
 
