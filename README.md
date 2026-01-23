@@ -103,6 +103,25 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
     android:networkSecurityConfig="@xml/network" //add this
      >
    ```
+   You can refer to this folder tree
+   ```
+   your-project-root/
+      ├── android/
+      │   └── app/
+      │       └── src/
+      │           └── main/
+      │               ├── res/
+      │               │   ├── xml/
+      │               │   │   └── network_security_config.xml  <-- (Custom XMLs)
+      │               │   ├── values/
+      │               │   │   └── strings.xml                  <-- (Text/Strings)
+      │               │   └── drawable/
+      │               │       └── splash_screen.xml            <-- (Vector/Images)
+      │               └── AndroidManifest.xml                  <-- (App Manifest)
+      ├── ios/
+      ├── src/
+      └── package.json
+   ```
 8. For more detailed information about how to implement please check in folder ModuleApplication
 
 ## 📖 How to Use (Up to Version 0.1.12)
