@@ -88,7 +88,7 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
    MAPXUS_RELEASE_PASSWORD=NqTDm1UiCihOdus3
    ```
 5. **Change minimumSdk of your project to 26**
-6. Add this to an xml file.
+6. Add an xml file in android/app/src/main/res/xml/[name].xml (name is flexible).
    ```
    <?xml version="1.0" encoding="utf-8"?>
    <network-security-config>
