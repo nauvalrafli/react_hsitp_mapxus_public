@@ -88,7 +88,16 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
    MAPXUS_RELEASE_PASSWORD=NqTDm1UiCihOdus3
    ```
 5. **Change minimumSdk of your project to 26**
-6. For more detailed information about how to implement please check in folder ModuleApplication
+6. Add this network security config, and apply it to application networkSecurityConfig to register the local url.
+   ```
+   <?xml version="1.0" encoding="utf-8"?>
+   <network-security-config>
+     <domain-config cleartextTrafficPermitted="true">
+       <domain includeSubdomains="true">appapi-uat.hsitp.local</domain>
+     </domain-config>
+   </network-security-config>
+   ```
+8. For more detailed information about how to implement please check in folder ModuleApplication
 
 ## 📖 How to Use (Up to Version 0.1.12)
 
