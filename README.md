@@ -54,8 +54,17 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
        height: '100%',
      },
    });
+   ```   
+3. For iOS: Add camera and location permissions to ios/YourAppName/Info.plist:
    ```
-3. Add these lines on android/build.gradle
+   <key>NSCameraUsageDescription</key>
+   <string>This app requires camera access for AR navigation features</string>
+   <key>NSLocationWhenInUseUsageDescription</key>
+   <string>This app requires location access to show your position on the map</string>
+   <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+   <string>This app requires location access to show your position on the map</string>
+   ```
+4. Add these lines on android/build.gradle
    ```
    allprojects {
      repositories {
@@ -81,14 +90,14 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
      }
    }
    ```
-4. Add the credentials on android/gradle.properties
+5. Add the credentials on android/gradle.properties
    ```
    MAPXUS_RELEASE_URL=https://nexus3.mapxus.com/repository/mapxus-releases
    MAPXUS_RELEASE_USERNAME=4uGBjGYX
    MAPXUS_RELEASE_PASSWORD=NqTDm1UiCihOdus3
    ```
-5. **Change minimumSdk of your project to 26**
-6. Add an xml file in android/app/src/main/res/xml/[name].xml (name is flexible).
+6. **Change minimumSdk of your project to 26**
+7. Add an xml file in android/app/src/main/res/xml/[name].xml (name is flexible).
    ```
    <?xml version="1.0" encoding="utf-8"?>
    <network-security-config>
@@ -97,7 +106,7 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
      </domain-config>
    </network-security-config>
    ```
-7. Apply it to application networkSecurityConfig to register the local url. You can do this inside the android folder's Android Manifest
+8. Apply it to application networkSecurityConfig to register the local url. You can do this inside the android folder's Android Manifest
    ```
    <application android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:allowBackup="true" android:theme="@style/AppTheme" android:supportsRtl="true"
     android:networkSecurityConfig="@xml/network" //add this
@@ -122,7 +131,7 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
       ├── src/
       └── package.json
    ```
-8. For more detailed information about how to implement please check in folder ModuleApplication
+9. For more detailed information about how to implement please check in folder ModuleApplication
 
 ## 📖 How to Use (Up to Version 0.1.12)
 
