@@ -133,6 +133,18 @@ A **React Native** integration of the **Mapxus HSITP** SDK — enabling develope
    ```
 9. For more detailed information about how to implement please check in folder ModuleApplication
 
+### Notes:
+- For iOS development, if you have issues on build saying multiple commands produce the same assets, please run these in the terminal in the root folder of your application.
+```
+#Remove existing build
+rm -rf ~/Library/Developer/Xcode/DerivedData
+
+#Restart pods by reinstalling
+cd ios
+bundle exec pod deintegrate
+bundle exec pod install
+```
+
 ## 📖 How to Use (Up to Version 0.1.12)
 
 1. Install the package. In case of updating the package, please delete your existing node_modules. 
